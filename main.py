@@ -1,5 +1,7 @@
+
 with open('1.PNG', 'rb') as in_file:
     with open('2.PNG', 'ab') as out_file:
+
         chunk = 4096
 
         while True:
@@ -7,4 +9,7 @@ with open('1.PNG', 'rb') as in_file:
             if chnk:
                 out_file.write(chnk)
             else:
-                break
+              break
+              print("end")
+
+        out_file.write(str.encode("//1//PNG"))
